@@ -1,0 +1,30 @@
+0 1 2 3 4 5 6 7 8 9 is the decimal number system
+0 1 is the binary number system
+0 1 2 3 4 5 6 7 8 9 A B C D E F is the hex number system
+
+Each hexadecimal number corresponds to four bits
+
+Dec     Bin     Hex
+0       0000    0
+1       0001    1
+2       0010    2
+3       0011    3
+4       0100    4
+5       0101    5
+6       0110    6
+7       0111    7
+8       1000    8
+9       1001    9
+10      1010    A
+11      1011    B
+12      1100    C
+13      1101    D
+14      1110    E
+15      1111    F
+
+To count in base 2 (binary), base 8 (octal), base 10 (dec) or base 16 (hex) each base value is a power of that number.
+For example base 2 which is binary you would convert 1011 to (1 * 2^3) + (0 * 2^2) + (1 * 2) + (1 * 2^0)
+For example base 10 which is dec you would convert 134 to (1 * 10^2) + (3 * 10) + (4 * 10^0)
+For example base 16 which is hex you would convert ACF6 to (10 * 16^3) + (12 * 16^2) + (15 * 16^1) + (6 * 16^0)
+
+So to count in any base it is usually the form:

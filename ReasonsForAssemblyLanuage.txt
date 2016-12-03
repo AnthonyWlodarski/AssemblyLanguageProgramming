@@ -1,0 +1,7 @@
+1.) Allows us to avoid writing code in binary directly into the machine.
+2.) Reads words and stores them into bits, bits are read and assembles them into their proper form. E.g. "AND AC,37".  Uses mnemonics instead of bit patterns.
+3.) If you understand Assembly you will be better at C/C++ and Java as you understand what goes on inside the CPU.
+4.) Learn more about how computers work!
+5.) Write faster and smaller code compared to compilers, however not as true with modern compiler optimizations.
+6.) Directly access hardware from assembly.
+7.) Get a better understanding of what the compiler is doing for you.
