@@ -1,0 +1,21 @@
+FLAGS is the 16 bit version of EFLAGS.  This register holds a collection of flag bits.
+You address the register one bit at a time.  Various instructions affect the flags in
+different ways.  The flags are called condition codes.
+
+OF  overflow flag -> set when the result of an operation is too big in location
+SF  sign flag -> set when result of operation is negative HO bit is set to 1
+                    subtract two values and check the sign flag
+ZF  zero flag -> set when results of operation is zero
+                    to see if two numbers you subtract and check this flag
+CF  carry flag -> if the results of any arithmetic operation have a carry bit then this
+                    flag is set
+DF  direction flag -> with the direction set the order of a copy operation can set at the highest
+                        to the lowest or the lowest to the highest
+IF  interrupt flag ->
+TF  trap flag   -> the CPU will only execute a single instruction before it calls an interrupt
+                    routine.
+AF  aux carry flag  -> uses bcd numbers operations, not really used anymore
+PF  parity flag -> in the low order bit if all bits are odd we have this flag set
+
+The other registers are used in legacy chipsets or may not be used at all. Some instructions may
+or may not set these flags.

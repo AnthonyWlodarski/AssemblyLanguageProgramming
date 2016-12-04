@@ -1,0 +1,22 @@
+196 is interpreted as a base ten number.
+0C4h is interpreted as a base sixteen number.
+0C4H is the same with different case.
+0xC4 is the same.
+$0C4 is the same, but must be followed by a digit.
+
+You can also write numbers in octal but don't ever do this, octal is dumb.
+
+You can also write binary numbers but they must be followed by a b/B.
+100101010B, 10100101b.  You can also use underscores to group values.
+1001_1000b.
+
+"..",'..',`..` are used to create string constants and can all be interpolated.
+\",\',\` can be used to escape sequences.
+
+\0 is the zero byte values, special case of an octal number
+\xFF can be used for hex.
+\u can be used for unicode characters
+\U can be used for extended unicode characters.
+
+mov eax,'abcd' moves the literal character constant into the eax register but is reversed as
+    'dcba'

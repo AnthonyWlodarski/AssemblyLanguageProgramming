@@ -1,0 +1,35 @@
+Fundamental syntax of a line in ASM
+
+label: instruction operands ; comment
+
+macro is different as syntax is different, when expanded it creates a line of the above form.
+\ character is a continuation character
+
+fields are separated by spaces, the colon following the label is optional
+
+mov: mov eax,4 -> valid statement
+mov  mov eax,4 -> error
+
+label
+label:
+
+The above are both valid.
+
+ALWAYS USE A COLON AND USE THE WARNING MESSAGE FOR LABELS THAT DON'T HAVE COLONS!
+
+Labels can begin with _?.$
+Labels are case sensitive
+
+The opcode can be any machine instruction or repeat commands.  Can also be prefixed with size
+prefixes 16/32/64
+
+Operands depend on the instruction
+    mov eax,17 -> copies 17 into eax register
+
+Effective address is obtained by applying indexing to a specify address.
+    mov ax,[blot] will copy the contents at the memory address of blot.
+    mov ax,[blot+1] is one byte past blot
+    mov ax,[blot+cx]
+
+    mov ax,fish -> constant value or address itself
+    mov ax,[fish] -> contents being copied

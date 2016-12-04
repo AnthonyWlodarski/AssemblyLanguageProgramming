@@ -1,0 +1,44 @@
+When working with memory and the CPU you can access memory by it's address.  The largest
+value you can address in a 32-bit architecture is 4,294,967,295. You can address spaces
+larger than this but this is discussed later.
+
+Registers are used in intel chipsets to address memory.  There are 8/16/32 bit versions
+of these registers.  All registers are 32 bits inside.  You can address the whole 32 bits
+or the 16 bits.
+
+32-bit name     16-bit name
+ESI             SI
+EDI             DI
+EBP             BP
+ESP             SP
+
+E stands for extended or expanded.
+
+There are some additional registers based on size as an example
+
+<--------32 bits -------->
+            <---16 bits-->
+            <--8--><--8-->
+
+EAX would address the whole register
+AX would address the 16 bits
+AH would address the high 8 bits
+AL would address the low 8 bits
+
+The naming convention is E for extend
+X for the lower 16 (hexadecimal...)
+H for the high 8 bits
+L for the low 8 bits
+
+There are four of these registers A,B,C,D.
+
+BUT WAIT THERE'S MORE!
+
+The IP register is a 32-bit register that holds the address of the next instruction to be
+executed.  It is a specialized register, it is loaded and executed, at that time it is moved
+forward to the new instruction.
+
+CS, DS, SS AND ES registers are the segment registers and are set by the operating system. You
+cannot write to them and they determine the 4 gigabytes you can address.
+
+EFLAGS is a collection of named bits and is very important!

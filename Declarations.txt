@@ -1,0 +1,55 @@
+db 100 is the define byte instruction.
+
+This defines one byte and stores 100 in it.
+
+db 64h
+
+This is the same way as using db 100
+
+db 17,C4h,"abcd",0x44
+
+This defines multiple bytes in memory
+
+resb 22
+
+Creates a block of 22 bytes with no initial values.
+
+resw 1
+
+Reserves one word of space (2 bytes).
+
+resd
+resq
+rest
+reso
+resy
+
+All examples of reserved space words.
+
+If you would like to use binary files you can do the following
+
+image: incbin "flower.jpg"
+
+By default the entire file is included.
+
+audio: incbin "brock.au", 1024
+
+The above will skip over the first 1024 bytes.
+
+bark: incbin "dog.au",250,300
+
+This will start at 250 bytes but then stop at 300 bytes so including only 50 bytes.
+
+level equ 34
+
+The above tells the assembler to equate 34 with the label "level"
+
+locate equ $
+
+The dollar sign has a double meaning, it is the address of the current location. You
+can use dollar signs in the beginning of the string.
+
+string: db "hello, world",10
+length equ $-string
+
+The above sets the label length to the memory address of the current value minus the string.

@@ -1,0 +1,38 @@
+Shifting bits to the left one position multiplies them by two, e.g.
+
+0110 > 1100 = 6 * 2 = 12 which is 1100 in binary.
+
+Shifting bits the right is the same as division, e.g.
+
+0100 > 0010 = 4/2 which is 2 which is 0010 in binary.
+
+Addition of binary numbers
+
+0110(6)
+0010(2) +
+----
+1000
+
+When you encounter two 1 values being added you must carry a bit to the left (0 carry 1). Otherwise
+you just add 1 and 0 normally.
+
+0001
+1100 +
+----
+1101
+
+Subtraction of numbers using two's compliment.
+
+0110 - 0010
+
+You take the compliment of the second number
+
+1101 and add 1 to it, i.e. 1110 thus getting the two's compliment. Then you add it to the
+original number.
+
+0110
+1110 +
+----
+10100
+
+When given an overflow bit we simply discard the bit.  Thus we arrive at 0100 which is 4.

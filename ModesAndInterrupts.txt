@@ -1,0 +1,22 @@
+The smallest addressable unit on a computer is in bytes, adding 1 to an address moves
+it to the next byte.
+
+words are two bytes and to move from one address to the next you add two.
+double word is a dword, to move from one address to the next you add four.
+quad word is a qword, to move from one address to the next you add eight.
+
+Modes determine how we address memory.
+
+Real mode
+Real mode flat model
+Real mode segmented model
+Protected mode flat model
+
+When a program executes it moves through instructions one at a time. One important
+exception is an interrupt.  An outside stimulus can cause the normal flow to be interrupted.
+
+1.) Program halts for interrupt
+2.) Program status is saved
+3.) Interrupt is serviced
+4.) Program status is restored
+5.) Program resumes

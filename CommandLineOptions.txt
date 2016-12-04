@@ -1,0 +1,42 @@
+nasm <filename> -> only the input file is used, the output is the default and it is
+derived fromt he input file.
+
+nasm -f <format> <filename> -o <output> e.g.
+nasm -f elf module.asm
+nasm -f bin module.asm -o module.com
+nasm -f obj module.asm
+
+The -f option is what determines the format. Use nasm -hf for a list.
+
+nasm -f obj -y will give you more information for the format you are specifying.
+
+The -o option specifies the name of the output file, if you don't specify one the
+compiler will create one based on the input file.  If the output file already exists
+it is overwritten.
+
+The -f option helps you determine the format of the output.
+The -l option helps you create a list file.
+The -M option helps you use a make file.
+The -MG options help you create any regenerated missing files.
+The -MG -MF
+The -MD creates a dependency file and regular compilation occurs.
+The -g option causes debug information to be created.
+The -g -F <format>
+The -i/-I option allows you to specify the directory for an include file and must include
+the trailing slash.
+The -p <filename> allows you to use a include file.
+The -D
+The -E allows you to run a pre-processor but not the assembler.
+The -a option suppresses the pre-processor, no macros are expanded.  Provides a speed enhancement
+The -O1 suppresses all optimization.
+The -t option makes the compiler compatible with borland assembler.
+
+The -Xvc displays errors in Visual C style.
+The -Xgnu displays errors in GNU format.
+The -Z <filename> option allows you to save stderr to a file.
+The -s redirects all errors to stdout
+The -w-<warning>/-w+<warning> options are used to disable classes of warning messages.
+
+The --prefix/--postfix option allows you to prepend/append words to variable names.
+
+NASMENV is a environment variable that you can use for compilation
